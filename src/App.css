@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login {
+  background-image: url('./assets/login.jpg'); 
+  background-size: cover;
+  height: 100vh;
+  
+}
+
+@media (max-width: 490px) {
+  .login {
+    background-image: url('./assets/login\ 3.png');
+    height: 150%;
+    background-size: cover;
+  }
+}
