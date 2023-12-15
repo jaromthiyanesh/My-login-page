@@ -11,6 +11,7 @@ const Signup = () => {
   const [Email,setEmail]=useState('');
   const [Password,setPassword]= useState('');
   const [Confirmpass,setConfirmpass]=useState('');
+  const [Phone,setPhone ]=useState('')
   
 
     function click(){
@@ -19,6 +20,7 @@ const Signup = () => {
             localStorage.setItem('First',First);
             localStorage.setItem('Last',Last);
             localStorage.setItem('Confirmpass',Confirmpass);
+            localStorage.setItem('Phone',Phone );
             
             if (Email !== '' && Password !== '' && First !== '' && Last !== '' && Confirmpass !== ''){
               nav('/')
@@ -44,6 +46,9 @@ const Signup = () => {
     function password(e){
       setPassword(e.target.value)
     } 
+    function phone(e){
+        setPhone(e.target.value)
+    }
 
     return (
         <div className='login text-white'>
@@ -83,7 +88,7 @@ const Signup = () => {
                             </div>
                             <div className='space-y-1'>
                                 <h1 className='sm:text-md lg:text-xl font-medium'>Phone Number</h1>
-                                <input className='sm:w-[200px] lg:w-[300px] sm:h-[30px] lg:h-[45px] text-black font-medium p-3 rounded-xl' type='email' placeholder='Enter Your Phone Number' />
+                                <input className='sm:w-[200px] lg:w-[300px] sm:h-[30px] lg:h-[45px] text-black font-medium p-3 rounded-xl' type='number' placeholder='Enter Your Phone Number' value={Phone} onChange={phone} />
                             </div>
 
 
